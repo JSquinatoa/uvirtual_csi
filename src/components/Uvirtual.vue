@@ -42,6 +42,7 @@ export default {};
   color: white;
 }
 
+
 /* Estilos para el menu */
 .menu {
   height: 100px;
