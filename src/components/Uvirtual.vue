@@ -3,10 +3,16 @@
 
     <div class="cabecera">
         <div class="contactos">
-
+          <img src="../recurso/phone-solid.svg" alt="n">          
+          <p>Teléfono : (000) 123-456</p>
+          <img src="../recurso/envelope-regular.svg" alt="n">
+          <p>Correo electrónico : info@example.com</p>
         </div>
-        <div class="configuraciones">
-
+        <div class="configuraciones" >         
+          <p class="idiomas"> <img src="../recurso/language-solid.svg" alt="">
+            Español - Internacional (es) 
+            <span>ˇ</span></p>
+          <p style="font-size: 16px">Acceder</p>
         </div>
     </div>
 
@@ -40,6 +46,41 @@ export default {};
   position: sticky;
   top: 0%;
   color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactos{
+  display: flex;
+  gap: 10px;
+  font-family: "Century Gothic", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.contactos img{
+  width: 16px;
+  color: white;
+}
+
+.configuraciones{
+  display: flex;
+  gap: 20px;
+  font-family: "Century Gothic", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  align-items: center;
+}
+
+.idiomas{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.idiomas p img {
+  
 }
 
 
