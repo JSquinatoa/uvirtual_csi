@@ -1,6 +1,5 @@
 <template>
   <div class="contianer_uvirtual">
-
     <div class="cabecera">
       <div class="contactos">
         <img src="../recurso/phone-solid.svg" alt="n" />
@@ -28,17 +27,70 @@
         <h1>Entrar a Universidad Central del Ecuador</h1>
 
         <div class="login_campos">
-          <input type="text" placeholder="Nombre de usuario" v-model="nombre"/>
-          <input type="password" placeholder="Contraseña" v-model="password"/>
-          <button @click="guardarUsuario()" >Acceder</button>
+          <input type="text" placeholder="Nombre de usuario" v-model="nombre" />
+          <input type="password" placeholder="Contraseña" v-model="password" />
+          <button @click="guardarUsuario()">Acceder</button>
           <a href="">¿Olvidó su contraseña?</a>
         </div>
         <div class="divisor"></div>
         <h2>Algunos cursos permiten el acceso de invitados</h2>
+        <button class="invitado">Entrar como persona invitada</button>
+        <div class="divisor"></div>
+        <div class="avisos">
+          <p
+            class="idiomas"
+            style="color: #004671; margin-left: -30px; margin-top: -4px"
+          >
+            <img src="../recurso/language-solid.svg" alt="" />
+            Español - Internacional (es)
+            <span>ˇ</span>
+          </p>
+          <div class="divisor_vertical"></div>
+          <button class="boton_aviso">Aviso de</button>
+        </div>
       </div>
     </div>
 
-    <div class="footer"></div>
+    <div class="footer">
+      <divc class="row">
+        <div class="columna">
+          <img src="../recurso/logo_uce.png" alt="" class="logo" />
+          <p class="p_info">
+            La Universidad Central del Ecuador, es la universidad más antigua y
+            la segunda más grande por número de estudiantes de la República del
+            Ecuador. Se ubica en el centro-norte de la ciudad de Quito, en la
+            llamada ciudadela universitaria.
+          </p>
+        </div>
+
+        <div class="columna links">
+          <h2 class="h2_info">Información</h2>
+          <a href="">Comunidad Moodle</a>
+          <a href="">Soporte gratuito Moodle</a>
+          <a href="">Desarrollo Moodle</a>
+          <a href="">Documentación Moodle</a>
+          <a href="">Moodle.com</a>
+        </div>
+
+        <div class="columna contacta">
+          <h2 class="h2_info">Contacta</h2>
+          <p>308 Negra Narrow Lane, Albeeze, New <br>york, 87104</p>
+          <p>
+            <img src="../recurso/phone-solid.svg" alt="n" /> Teléfono : (000)
+            123-456
+          </p>
+
+          <p>
+            <img src="../recurso/envelope-regular.svg" alt="n" /> Correo
+            electrónico : <br>info@example.com
+          </p>
+        </div>
+
+        <div class="columna">
+          <img src="../recurso/logo_uce.png" alt="" class="logo" />
+        </div>
+      </divc>
+    </div>
 
     <div class="copyright"></div>
   </div>
@@ -48,18 +100,19 @@
 import { guardarUsuarioFachada } from "@/client/UvirtualClient.js";
 
 export default {
-
-  data(){
-    return{
+  data() {
+    return {
       nombre: "",
-      password:"",   
-    }
+      password: "",
+    };
   },
-  methods:{
-    async guardarUsuario(){
-      await guardarUsuarioFachada(this.nombre, this.password)
-    }
-  }
+  methods: {
+    async guardarUsuario() {
+      await guardarUsuarioFachada(this.nombre, this.password);
+      this.nombre = "";
+      this.password = "";
+    },
+  },
 };
 </script>
 
@@ -109,6 +162,7 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  width: 100%;
 }
 
 .idiomas img {
@@ -297,10 +351,198 @@ h2 {
   line-height: 1.2;
 }
 
+.invitado {
+  border-color: #eee;
+  cursor: pointer;
+  background-color: #a28f23;
+  height: 45px;
+  outline: none;
+  line-height: 2;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9375rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: none;
+
+  margin: 0;
+}
+
+.invitado:hover {
+  background: #004671;
+}
+
+.avisos {
+  display: flex;
+  box-sizing: border-box;
+  unicode-bidi: isolate;
+  font-size: 16px;
+  font-family: Century Gothic, Arial, Helvetica, sans-serif;
+  color: #656565;
+  background-color: #fff;
+}
+
+.divisor_vertical {
+  width: 1px;
+  background-color: #dee2e6;
+  height: 1.875rem;
+  position: relative;
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+  align-self: center !important;
+  border-left: 1px solid #dee2e6 !important;
+  outline: none;
+  box-sizing: border-box;
+  display: block;
+  unicode-bidi: isolate;
+  font-size: 16px;
+  font-family: Century Gothic, Arial, Helvetica, sans-serif;
+  color: #656565;
+}
+
+.boton_aviso {
+  border-color: #eee;
+  cursor: pointer;
+  background-color: #a28f23;
+  height: 45px;
+  outline: none;
+  line-height: 2;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9375rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.boton_aviso:hover {
+  background: #004671;
+}
+
 /* Estilos para el footer */
 .footer {
   height: 331px;
   background-color: #004671;
+  padding: 30px 0 54px;
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+  display: block;
+  unicode-bidi: isolate;
+  color: #f8f9fa !important;
+  font-size: 16px;
+  font-family: Century Gothic, Arial, Helvetica, sans-serif;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  box-sizing: border-box;
+  unicode-bidi: isolate;
+  color: #f8f9fa !important;
+  font-size: 16px;
+  font-family: Century Gothic, Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+}
+
+.columna {
+  padding: 25px 0 0;
+  box-sizing: border-box;
+  display: block;
+  unicode-bidi: isolate;
+  color: #f8f9fa !important;
+  font-size: 16px;
+  font-family: Century Gothic, Arial, Helvetica, sans-serif;
+  flex: 0 0 25%;
+
+  max-width: 25%;
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.p_info {
+  color: #fff;
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  font-size: 16px;
+  font-family: Century Gothic, Arial, Helvetica, sans-seri;
+}
+
+.h2_info {
+  font-weight: bold;
+  line-height: 36px;
+  margin: 0 0 20px;
+  font-size: 34px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.links a {
+  padding-left: 0;
+  outline: none;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  display: block;
+  color: white;
+}
+
+.links a:hover {
+  color: #a28f23;
+  outline: none;
+  text-decoration: none;
+}
+.contacta{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 0px;
+  font-size: 16px;
+}
+
+.contacta p{
+  margin-bottom: 20px;
+  
+}
+
+.contacta p img{
+  width: 17px;
+  padding-right: 5px;
 }
 
 /* Estilos para el copyright */
