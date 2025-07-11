@@ -637,8 +637,7 @@ h2 {
   font-family: Century Gothic, Arial, Helvetica, sans-serif;
 }
 
-.copyright p{
-  padding-top: 2px ;
-
+.copyright p {
+  padding-top: 2px;
 }
 </style>
