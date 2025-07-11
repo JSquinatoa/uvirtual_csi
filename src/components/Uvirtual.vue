@@ -89,16 +89,45 @@
         <div class="columna">
           <h2 class="h2_info">Síguenos</h2>
           <div class="container_icons">
-            <a href="" class="iconos twiter"></a>
-            <a href="" class="iconos gplus"></a>
-            <a href="" class="iconos pinterest"></a>
-            <a href="" class="iconos facebook"></a>
+            <a href="" class="iconos twiter">
+              <img
+                src="../recurso/twitter-brands.svg"
+                alt=""
+                style="width: 24px"
+              />
+            </a>
+
+            <a href="" class="iconos gplus">
+              <img
+                src="../recurso/google-plus-g-brands.svg"
+                alt=""
+                style="width: 30px"
+              />
+            </a>
+
+            <a href="" class="iconos pinterest">
+              <img
+                src="../recurso/pinterest-p-brands.svg"
+                alt=""
+                style="width: 18px"
+              />
+            </a>
+
+            <a href="" class="iconos facebook">
+              <img
+                src="../recurso/facebook-f-brands.svg"
+                alt=""
+                style="width: 15px"
+              />
+            </a>
           </div>
         </div>
       </divc>
     </div>
 
-    <div class="copyright"></div>
+    <div class="copyright">
+      <p>Copyright © 2025 - Dirección de Tecnologías de la Información</p>
+    </div>
   </div>
 </template>
 
@@ -602,5 +631,14 @@ h2 {
   height: 29px;
   background-color: #111;
   padding: 10px 0;
+  text-align: center;
+  color: #f8f9fa !important;
+  font-size: 16px;
+  font-family: Century Gothic, Arial, Helvetica, sans-serif;
+}
+
+.copyright p{
+  padding-top: 2px ;
+
 }
 </style>
