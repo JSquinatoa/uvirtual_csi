@@ -74,7 +74,7 @@
 
         <div class="columna contacta">
           <h2 class="h2_info">Contacta</h2>
-          <p>308 Negra Narrow Lane, Albeeze, New <br>york, 87104</p>
+          <p>308 Negra Narrow Lane, Albeeze, New <br />york, 87104</p>
           <p>
             <img src="../recurso/phone-solid.svg" alt="n" /> Teléfono : (000)
             123-456
@@ -82,12 +82,18 @@
 
           <p>
             <img src="../recurso/envelope-regular.svg" alt="n" /> Correo
-            electrónico : <br>info@example.com
+            electrónico : <br />info@example.com
           </p>
         </div>
 
         <div class="columna">
-          <img src="../recurso/logo_uce.png" alt="" class="logo" />
+          <h2 class="h2_info">Síguenos</h2>
+          <div class="container_icons">
+            <a href="" class="iconos twiter"></a>
+            <a href="" class="iconos gplus"></a>
+            <a href="" class="iconos pinterest"></a>
+            <a href="" class="iconos facebook"></a>
+          </div>
         </div>
       </divc>
     </div>
@@ -527,7 +533,7 @@ h2 {
   outline: none;
   text-decoration: none;
 }
-.contacta{
+.contacta {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -535,14 +541,60 @@ h2 {
   font-size: 16px;
 }
 
-.contacta p{
+.contacta p {
   margin-bottom: 20px;
-  
 }
 
-.contacta p img{
+.contacta p img {
   width: 17px;
   padding-right: 5px;
+}
+
+.container_icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  unicode-bidi: isolate;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  justify-content: space-around;
+}
+
+.iconos {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: underline;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  box-sizing: border-box;
+  line-height: 60px;
+  text-align: center;
+}
+
+.twiter {
+  background-color: #47caf6;
+}
+
+.gplus {
+  background-color: #e84c3d;
+}
+
+.pinterest {
+  background-color: #cd2129;
+}
+
+.facebook {
+  background-color: #cd2129;
 }
 
 /* Estilos para el copyright */
